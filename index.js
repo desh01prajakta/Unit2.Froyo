@@ -1,4 +1,4 @@
-const userInputString = window.prompt("Enter Froyo Flavors", "coffee, vanilla, strawberry");
+const userInputString = window.prompt("Enter Froyo Flavors", "coffee, vanilla, strawberry, chocolate");
 
 const stringArray = userInputString.split(",");
 
@@ -10,9 +10,17 @@ for(let i = 0; i< stringArray.length; i++){
 }
 console.log(numbers);
 
-const flavors = {
-    vanilla: 3,
-    coffee: 2,
-    strawberry: 1,
+
+function getFlavors(flavors){
+    const totalFlavors = 0;
+    for(let i = 0; i <flavors.length; i++){
+    totalFlavors = flavors[i]};
+    return totalFlavors;
+
 }
-console.log(flavors);
+console.log(totalFlavors(numbers));
+
+function getLength(numbers){
+    return numbers.length
+}
+
