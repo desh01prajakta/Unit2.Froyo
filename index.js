@@ -1,26 +1,21 @@
 
 
-const userInputString = window.prompt("Enter Froyo Flavors", "coffee,vanilla,strawberry");
+const userInputString = window.prompt("Enter Froyo Flavors", "", ",");
 
-const stringArray = userInputString.split(",");
+const stringArray = userInputString.split(",").map(str => str.trim());;
 
 console.log(stringArray);
 
 function counting(stringArray){
-let flavors = {
-    vanilla: 0,
-    coffee: 0,
-    strawberry: 0
-    }
+let map = {};
 for(let i = 0; i < stringArray.length; i++){
-    if(stringArray[i] == "vanilla"){
-        flavors["vanilla"]+=1;
-    }else if(stringArray[i] == "strawberry"){
-        flavors["strawberry"]+=1;
-    }else if(stringArray[i] == "coffee") {
-        flavors["coffee"]+=1;
+    if(map[stringArray[i]]){
+        map[stringArray[i]]++;
+    }else {
+        map[stringArray[i]] = 1;
     }
-} return flavors;
+  }
+  return map;
 }
 console.log(counting(stringArray));
 
